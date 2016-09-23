@@ -1,0 +1,5 @@
+1. Some css is needed that needs to be moved and added to some component.
+2. Panel Container can only have PanelItem as child.
+3. PostCSS for inline elements
+4. Scrollbars on Chrome device
+5. Documentation
