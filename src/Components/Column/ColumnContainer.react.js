@@ -1,17 +1,8 @@
 import React from 'react';
+import Base from '../Base.react';
 
-const ColumnContainer = ({children,style}) =>{
-  let addStyle = {
-    display:'flex',
-    alignItems: 'center',
-    flexDirection:'column',
-    flex:1,
-    height:'100%',
-    overflow:'hidden',
-  }
-  return <div style={{...addStyle, ...style}}>
-    {children}
-  </div>
+const ColumnContainer = (props) => {
+  return <Base {...props} />
 }
 
 export default ColumnContainer;

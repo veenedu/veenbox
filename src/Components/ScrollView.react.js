@@ -5,6 +5,7 @@ import {combineStyles} from './Base.react';
 const ScrollView = (props) => {
   let addStyle  = {
     'overflowY':'auto',
+    display:null,
   }
   return <Base halign='flex-start' valign='flex-start' {...combineStyles(props,addStyle)} />
 }

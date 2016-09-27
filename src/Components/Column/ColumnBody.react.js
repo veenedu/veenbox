@@ -1,16 +1,9 @@
 import React from 'react';
+import Base from '../Base.react';
 
-const ColumnBody = ({children,style}) =>{
-  let addStyle = {
-    display:'flex',
-    flex:1,
-    width:'100%',
-    overflow:'hidden',
-    flexDirection:'column',    
-  }
-  return <div style={{...addStyle, ...style}}>
-    {children}
-  </div>
+const ColumnBody = (props) => {
+
+  return <Base {...props} />
 }
 
 export default ColumnBody;

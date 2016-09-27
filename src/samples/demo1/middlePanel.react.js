@@ -28,17 +28,27 @@ function addStory(stories,num){
 var stories = addStory([],50);
 
 const middlePannel = () => (
-    <ColumnContainer>
-      <ColumnHeader>
+    <ColumnContainer style={{
+      backgroundColor:'blue'
+    }}>
+      <ColumnHeader style={{
+        backgroundColor:'orange'
+      }}>
         <Container style={{
           paddingLeft:5,
-          paddingRight:5
+          paddingRight:5,
+          backgroundColor:'pink'
         }}>
-          <InlineForm
-            buttonLabel="Search"
-            label="InlineForm"
-            name="inline_form"
-          />
+        <InlineForm
+          p={0}
+          buttonLabel="Search"
+          label="InlineForm"
+          name="inline_form"
+          style={{
+            padding:0,
+            margin:0
+          }}
+        />
         </Container>
       </ColumnHeader>
         <ColumnBody style={{backgroundColor:'#fff'}}>

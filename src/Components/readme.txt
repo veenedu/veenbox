@@ -5,8 +5,9 @@ valign(justify-content)('center')
 halign(align-items)('center')
 dir(flex-direction)('column')
 
-
-
+--
+priority (top>bottom):::::::
+inline-prop => style-prop
 
 rootConatiner-> put this element at root, this will cover whole screen.
 

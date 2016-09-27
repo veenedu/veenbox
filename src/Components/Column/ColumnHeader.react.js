@@ -1,20 +1,16 @@
 import React from 'react';
+import Base, {combineStyles} from '../Base.react';
 
 export const HeaderStyle = {
-  display:'flex',
-  alignItems:'center',
-  width:'100%',
-  overflow:'hidden',
-  flexDirection:'column',
   paddingTop:10,
   paddingBottom:10,
+  height:60,
+  display:null,
+  flex:null,
 }
 
-const ColumnHeader = ({children,style}) =>{
-  let addStyle = HeaderStyle;
-  return <div style={{...addStyle, ...style}}>
-    {children}
-  </div>
+const ColumnHeader = (props) => {
+  return <Base  {...combineStyles(props,HeaderStyle)} />
 }
 
 export default ColumnHeader;

@@ -43,8 +43,6 @@ export default class App extends React.Component {
                 }}>
 
                   <PanelContainer>
-
-
                     <PanelItem style={{
                         backgroundColor:'#fff',
                         color:'#444',

@@ -16,23 +16,27 @@ const LeftPanel = ({switchChecked,handleSwitchChecked,handleToggleDrawer,drawerO
   <ColumnContainer>
 
     <ColumnHeader style={{
-      backgroundColor:'#fff'
+      backgroundColor:'green',
+      display:'flex'
     }}>
-      <PanelContainer>
-        <PanelItem style={{
+      <PanelContainer style={{
+        backgroundColor:'#f4f4f4'
+      }}>
+        <PanelItem halign="center" valign="center" style={{
           backgroundColor:'yellow'
         }} width={60}>
-          <Avatar
-            circle
-            size={32}
-            src={getAvatarURI()}
-            />
+            <Avatar
+              circle
+              size={32}
+              src={getAvatarURI()}
+              />
         </PanelItem>
-        <PanelItem style={{
-          backgroundColor:'red'
+        <PanelItem halign="center" valign="flex-start" style={{
+          backgroundColor:'red',
         }}>
           {getRandomWords(2)}
         </PanelItem>
+        <PanelItem width="30" halign="center" valign="flex-start"><Arrow direction="down" /></PanelItem>
       </PanelContainer>
     </ColumnHeader>
 
