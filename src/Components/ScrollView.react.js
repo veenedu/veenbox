@@ -1,15 +1,12 @@
 import React from 'react';
+import Base from './Base.react';
+import {combineStyles} from './Base.react';
 
-const Container = ({children,style}) => {
+const ScrollView = (props) => {
   let addStyle  = {
     'overflowY':'auto',
-    'overflowX':'hidden',
-    height:'100%'
   }
-
-  return <div style={{...style,...addStyle}}>
-   {children}
-  </div>
+  return <Base halign='flex-start' valign='flex-start' {...combineStyles(props,addStyle)} />
 }
 
-export default Container;
+export default ScrollView;

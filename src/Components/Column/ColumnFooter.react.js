@@ -1,12 +1,8 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import {HeaderStyle} from './ColumnHeader.react';
 
 const ColumnFooter = ({children,style}) =>{
-  let addStyle = {
-    height:40,
-    display:'flex',
-    alignItems:'center',
-    width:'100%'
-  }
+  let addStyle = HeaderStyle;
   return <div style={{...addStyle, ...style}}>
     {children}
   </div>

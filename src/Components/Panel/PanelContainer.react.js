@@ -1,17 +1,12 @@
 import React from 'react';
+import Base from '../Base.react';
 
-const PanelContainer = ({children ,style}) => {
-
-  var addStyle  = {
-    display:'flex',
-    flexDirection:'row',
-    flex:1,
-    height:'100%'
-  }
-
-  return <div style={{...addStyle, ...style}}>
-    {children}
-  </div>
+const PanelContainer = (props) => {
+  return <Base
+              dir="row"
+              halign='flex-start'
+              valign='flex-start'
+              {...(props)} />
 }
 
 export default PanelContainer;

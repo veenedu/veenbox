@@ -1,3 +1,11 @@
+GuideLines
+-----------
+Components does not depend on any packages(23 Sept).
+Any installed packages should only be used for viewing purpose.
+
+
+Tasks
+-----------
 1. Some css is needed that needs to be moved and added to some component.
 2. Panel Container can only have PanelItem as child.
 3. PostCSS for inline elements

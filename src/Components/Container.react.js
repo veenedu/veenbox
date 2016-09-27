@@ -1,15 +1,9 @@
 import React from 'react';
+import Base from './Base.react';
 
-const Container = ({children ,style}) => {
+const Container = (props) => {
 
-  let addStyle  = {
-    overflow:'hidden',
-    height:'100%'
-  }
-
-  return <div style={{...addStyle, ...style}}>
-    {children}
-  </div>
+  return <Base {...props} />
 }
 
 export default Container;

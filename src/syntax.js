@@ -1,4 +1,19 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
+
+
+const Container = ({children}) => (
+  <div>
+    Hello {children}
+  </div>
+);
+
+
+export default Container;
+
+
+---------
+
+import React, {PropTypes} from 'react';
 
 const ColumnBody = ({children,style}) =>{
   let addStyle = {
@@ -6,7 +21,6 @@ const ColumnBody = ({children,style}) =>{
     flex:1,
     width:'100%',
     overflow:'hidden',
-    flexDirection:'column',    
   }
   return <div style={{...addStyle, ...style}}>
     {children}
