@@ -1,5 +1,5 @@
 # Veen Box
-*veenbox provides common components for react anc react-native that can be used to build layouts for web and mobile*
+*veenbox provides common components for react and react-native that can be used to build layouts for web and mobile*
 
 
 ```js

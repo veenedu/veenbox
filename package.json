@@ -1,7 +1,7 @@
 {
   "name": "veenbox",
   "version": "1.0.11",
-  "description": "Configurable flexboxes that can be used to build React and ReactNative layout and structures",
+  "description": "veenbox provides common components for react and react-native that can be used to build layouts for web and mobile",
   "main": "lib/index",
   "dependencies": {},
   "devDependencies": {
