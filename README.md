@@ -1,15 +1,18 @@
-Usage
------
+# Veen Box
+*veenbox provides common components for react anc react-native that can be used to build layouts for web and mobile*
+
+
+```js
 import {RootContainer} from 'veenbox'
 //this way it automatically chooses platform
-or
-
+//or
 import RootContainer from 'veenbox/lib/RootContainer.web'
 import RootContainer from 'veenbox/lib/RootContainer.ios'
 import RootContainer from 'veenbox/lib/RootContainer.android'
+```
+# Available Components
 
-Available Components
------
+```
 Column/
   ColumnBody
   ColumnContainer
@@ -21,51 +24,58 @@ Panel/
 Container
 RootContainer
 ScrollView
+```
+
+# Sharing Style
+
+For all components you can pass in-style  
+For Web you can pass any styling property, you can override default beahior of component based on [css flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
+
+### Style Priority
+(Decreasing order)  
+-Inline Style    
+-Style Property
+
+
+# Props Available
+
+All components have property that can be configured, below is the documentation format
+> property_name => default value => flexbox equivalent
+
+
+###### valign => center => justify-content
+###### halign => center => align-items
+###### dir => column  =>  flex-direction
 
 
 
-GuideLines
------------
-Components does not depend on any packages(23 Sept).
+---         
 
+# Components Description
 
-Tasks
------------
-1. Some css is needed that needs to be moved and added to some component.
-2. Panel Container can only have PanelItem as child.
-3. PostCSS for inline elements
-4. Scrollbars on Chrome device
-5. Write proper documentation
-6. Move individual component to folders
-7. Add React-native components, make sure react(div) and react-native(view) both components have same default direction;
-8. Write sample projects for both web, mobile devices
+### RootConatiner
+put this element at root, this will cover whole screen.
 
-----
-(https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
-Props avaialble
+### Container
+this element occupies full available space height and width,   
+overflow will be hidden
 
-valign(justify-content)('center')
-halign(align-items)('center')
-dir(flex-direction)('column')
+### ScrollView
+this element takes whatever space available, but allow vertical scrolling
 
---
-priority (top>bottom):::::::
-inline-prop => style-prop
+### Panel
+(Horizontal Panels)
 
-rootConatiner-> put this element at root, this will cover whole screen.
+### PanelConatiner
+Takes available space.
 
-Container=> this element occupies full available space height and width;
-            overflow will be hidden
-
-ScrollView => this element takes whatever space available, but allow vertical scrolling
-
-Panel=> Horizontal Panels,
-PanelConatiner=> Takes available space.
-PanelItem => Put this inside PanelContainer, you can pass width, if not passed it takes auto width.
+### PanelItem
+Put this inside PanelContainer, you can pass width, if not passed it takes auto width.   
 a panelconatiner may have many panel items.
 
-Column => Horizontal column.
+###  Column
+(Horizontal column)   
 Put children in sequnce, you can ignore any component if you want.
-ColumnHeader =>
-ColumnBody =>
-ColumnFooter =>
+###### ColumnHeader
+###### ColumnBody
+###### ColumnFooter
