@@ -2,9 +2,7 @@ import React from 'react';
 import Base, {combineStyles} from '../Base.react';
 
 export const HeaderStyle = {
-  paddingTop:10,
-  paddingBottom:10,
-  height:60,
+  height:50,
   display:null,
   flex:null,
 }

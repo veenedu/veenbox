@@ -4,7 +4,7 @@ import React from 'react';
 //prom styles you receive from props, and your extra style
 export function combineStyles(props,addStyle){
   var  p = {...props};
-  p.style = {...(p.style), ...addStyle}
+  p.style = { ...addStyle, ...(p.style)}
   return p;
 }
 
@@ -39,9 +39,12 @@ const base = (props) =>{
     return {...acc, ...s}
   },{})
 
+  var newProps = {...props};
+  stylePairs.map((pair) =>{
+    delete newProps[pair[1]]
+  })
 
-
-  return <div style={{...combinedStyle,...styleFromProps}}>
+  return <div {...newProps} style={{...combinedStyle,...styleFromProps}}>
     {children}
   </div>
 }
