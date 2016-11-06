@@ -1,3 +1,27 @@
+Usage
+-----
+import {RootContainer} from 'veenbox'
+
+or
+
+import RootContainer from 'veenbox/lib/RootContainer.react'
+
+Available Components
+-----
+Column/
+  ColumnBody
+  ColumnContainer
+  ColumnFooter
+  ColumnHeader
+Panel/
+  PanelContainer
+  PanelItem
+Container
+RootContainer
+ScrollView
+
+
+
 GuideLines
 -----------
 Components does not depend on any packages(23 Sept).
@@ -13,9 +37,9 @@ Tasks
 
 Docs
 ----
-https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes
+(https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
 Props avaialble
-----
+
 valign(justify-content)('center')
 halign(align-items)('center')
 dir(flex-direction)('column')
