@@ -2,7 +2,7 @@
   "name": "veenbox",
   "version": "1.0.0",
   "description": "Configurable flexboxes that can be used to build React and ReactNative layout and structures",
-  "main": "index.js",
+  "main": "lib/index.js",
   "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.18.0",
