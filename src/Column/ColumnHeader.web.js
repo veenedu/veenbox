@@ -1,5 +1,5 @@
 import React from 'react';
-import Base, {combineStyles} from '../Base.web';
+import Base, {combineStyles} from '../Base/Base.web';
 
 export const HeaderStyle = {
   height:50,

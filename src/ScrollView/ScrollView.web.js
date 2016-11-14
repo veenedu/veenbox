@@ -1,6 +1,6 @@
 import React from 'react';
 import Base from './Base.web';
-import {combineStyles} from './Base.web';
+import {combineStyles} from '../Base/Base.web';
 
 const ScrollView = (props) => {
   let addStyle  = {
