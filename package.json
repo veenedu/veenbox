@@ -1,6 +1,6 @@
 {
   "name": "veenbox",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "veenbox provides common components for react and react-native that can be used to build layouts for web and mobile",
   "main": "lib/index",
   "dependencies": {},
