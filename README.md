@@ -6,9 +6,9 @@
 import {RootContainer} from 'veenbox'
 //this way it automatically chooses platform
 //or
-import RootContainer from 'veenbox/lib/RootContainer.web'
-import RootContainer from 'veenbox/lib/RootContainer.ios'
-import RootContainer from 'veenbox/lib/RootContainer.android'
+import RootContainer from 'veenbox/dist/RootContainer.web'
+import RootContainer from 'veenbox/dist/RootContainer.ios'
+import RootContainer from 'veenbox/dist/RootContainer.android'
 ```
 # Available Components
 
@@ -73,7 +73,7 @@ Takes available space.
 Put this inside PanelContainer, you can pass width, if not passed it takes auto width.   
 a panelconatiner may have many panel items.
 
-###  Column
+###  ColumnContainer
 (Horizontal column)   
 Put children in sequnce, you can ignore any component if you want.
 ###### ColumnHeader
