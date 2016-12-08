@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from '../Container.web';
+import Container from '../Container/Container.web';
 import {combineStyles} from '../Base/Base.web';
 
 
