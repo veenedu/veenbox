@@ -4,7 +4,11 @@
   "description": "veenbox provides common components for react and react-native that can be used to build layouts for web and mobile",
   "main": "dist/index",
   "dependencies": {
-    "react": "^15.4.1"
+    "css-loader": "^0.26.1",
+    "postcss": "^5.2.6",
+    "postcss-loader": "^1.2.0",
+    "react": "^15.4.1",
+    "style-loader": "^0.13.1"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
@@ -16,7 +20,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "rimraf dist",
-    "build": "babel src -d dist --ignore *.test.js",
+    "build": "babel src -d dist --ignore *.test.js --copy-files",
     "build:watch": "npm run build -- --watch"
   },
   "repository": {
