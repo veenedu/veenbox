@@ -4,11 +4,7 @@
   "description": "veenbox provides common components for react and react-native that can be used to build layouts for web and mobile",
   "main": "dist/index",
   "dependencies": {
-    "css-loader": "^0.26.1",
-    "postcss": "^5.2.6",
-    "postcss-loader": "^1.2.0",
-    "react": "^15.4.1",
-    "style-loader": "^0.13.1"
+    "react": "^15.4.1"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
