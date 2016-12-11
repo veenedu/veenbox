@@ -1,30 +1,21 @@
 import React, {PropTypes} from 'react';
-
-let timer = null;
-
+import {windowResize,getDimensions,wrapComponent} from '../utils/';
 
 export default class LayoutManager extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      width:window.innerWidth
+      width:getDimensions().width
     }
   }
 
   componentDidMount(){
     var that = this;
-    that.setState({
-      width:window.innerWidth
+    windowResize.subscribe(function({width}){
+      that.setState({
+        width:width
+      });
     });
-    window.onresize = function(event) {
-      window.clearTimeout(timer);
-      timer = window.setTimeout(function(){
-        that.setState({
-          width:window.innerWidth
-        });
-        window.clearTimeout(timer);
-      },300);
-    };
   }
 
   render() {
@@ -50,8 +41,8 @@ export default class LayoutManager extends React.Component {
       Comp = xl;
     }
 
-    console.log(width);
-    return  <Comp />
+    let Comp2 = wrapComponent(Comp);
+    return  <Comp2 />
   }
 }
 
