@@ -114,9 +114,11 @@ md => (optional) React Component
 lg => (optional) React Component
 xl => (optional) React Component
 
----
+--
+
 Note: If any bigger dimension is missing then previous small dimension will be displayed.
 Eg: you passed, 'xs' and 'lg'. So 'xs' will be displayed till 'lg' break point is not hit.
----
+
+--
 
 breakPoints = [a,b,c] => (optional), you can pass custom break points that you want Layoout Manager to trigger at.
