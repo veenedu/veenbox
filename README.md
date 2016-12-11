@@ -89,3 +89,34 @@ Put children in sequnce, you can ignore any component if you want.
 Import CSS reset as below
 
 `import 'veenbox/dist/css-reset.css';`
+
+# Layout Manager
+This component decicdes which Laypout to be displayed based platforms width.
+
+#### Eg
+```
+<LayoutManager
+              	xs = {xs}
+              	sm = {sm}
+              	md = {md}
+              	lg = {lg}
+              	xl = {xl}
+              	breakPoints =[340,780,1024,1280]
+            /> );
+
+```
+### Available Properties
+You pass components that needs to be displayed at particular screen size.
+
+xs => (Required), React Component
+sm => (optional) React Component
+md => (optional) React Component
+lg => (optional) React Component
+xl => (optional) React Component
+
+---
+Note: If any bigger dimension is missing then previous small dimension will be displayed.
+Eg: you passed, 'xs' and 'lg'. So 'xs' will be displayed till 'lg' break point is not hit.
+---
+
+breakPoints = [a,b,c] => (optional), you can pass custom break points that you want Layoout Manager to trigger at.
