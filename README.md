@@ -109,9 +109,13 @@ This component decicdes which Laypout to be displayed based platforms width.
 You pass components that needs to be displayed at particular screen size.
 
 xs => (Required), React Component
+
 sm => (optional) React Component
+
 md => (optional) React Component
+
 lg => (optional) React Component
+
 xl => (optional) React Component
 
 --
