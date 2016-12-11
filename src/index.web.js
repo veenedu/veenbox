@@ -7,3 +7,4 @@ export PanelItem from './Panel/PanelItem.web.js';
 export Container from './Container/Container.web.js';
 export RootContainer from './RootContainer/RootContainer.web.js';
 export ScrollView from './ScrollView/ScrollView.web.js';
+export LayoutManager from './LayoutManager/index.web.js'
