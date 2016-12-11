@@ -1,1 +1,1 @@
-export * from  './index.ios.js';
+export * from './index.mobi';
