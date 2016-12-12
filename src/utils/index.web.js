@@ -25,7 +25,8 @@ let
 
 export const windowResize = {
   subscribe:function(fn){
-    listeners[fn] = fn;
+    //subscribe only if not already subscribed
+    (!listeners[fn] && listeners[fn]  = fn);
     if(!subscription){
       subscription = Rx.Observable.fromEvent(window, 'resize')
           .debounceTime(200)
