@@ -14,30 +14,47 @@ export function getDimensions(){
 var listeners = {};
 export const windowResize = {
   subscribe:function(fn){
-    listeners[fn]  = fn;
+    //subscribe only if not already subscribed
+    (!listeners[fn] && (listeners[fn]  = fn));
   },
   unsubscribe:function(fn){
       delete listeners[fn];
   }
 }
 
-export function wrapComponent(Comp){
-  return class MyComponent extends React.Component {
-    constructor(props) {
-      super(props);
-      this.change= this.change.bind(this);
-    }
 
-    change(){
-      for (var key in listeners){
-        listeners[key](getDimensions());
-      }
-    }
+//This fixes infinite loop bug. But this needds to look more clean and elegant.
+let Comp = null;
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.change= this.change.bind(this);
+  }
 
-    render() {
-      return (<View
-          onLayout={this.change}
-         style={{flex:1}}><Comp /></View>);
+  change(){
+    console.log('2');
+    for (var key in listeners){
+      // console.log(getDimensions());
+      // console.log(listeners[key]);
+      console.log('---');
+      listeners[key](getDimensions());
+      // let l = listeners[key];
+      // let d= getDimensions();
+      // l(d);
     }
   }
+
+  render() {
+    console.log('1');
+    console.log(Object.keys(listeners).length,'listeners_.length');
+    return (<View
+        key="wrapper"
+        onLayout={this.change}
+       style={{flex:1}}><Comp /></View>);
+  }
+}
+
+export function wrapComponent(comp){
+  Comp = comp;
+  return MyComponent;
 }
