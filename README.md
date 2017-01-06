@@ -2,7 +2,7 @@
 
 #### samples (https://github.com/veenedu/veenbox_web_sample)
 
-*veenbox provides common components for react and react-native that can be used to build layouts for web and mobile*
+*veenbox provides react and react-native componets that can be used to build layouts for web and mobile platform using common API*
 
 
 ```js
@@ -56,7 +56,7 @@ All components have property that can be configured, below is the documentation 
 
 # Components Description
 
-### RootConatiner
+### RootContainer
 put this element at root, this will cover whole screen.
 
 ### Container
@@ -67,14 +67,14 @@ overflow will be hidden
 this element takes whatever space available, but allow vertical scrolling
 
 ### Panel
-(Horizontal Panels)
+(Vertical Panels)
 
-### PanelConatiner
+### PanelContainer
 Takes available space.
 
 ### PanelItem
 Put this inside PanelContainer, you can pass width, if not passed it takes auto width.   
-a panelconatiner may have many panel items.
+a panelContainer may have many panel items.
 
 ###  ColumnContainer
 (Horizontal column)   
