@@ -34,23 +34,44 @@ ScrollView
 For all components you can pass in-style  
 For Web you can pass any styling property, you can override default beahior of component based on [css flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
 
-### Style Priority
+## Style Priority
 (Decreasing order)  
--Inline Style    
--Style Property
+- Inline Property, eg halign, valign    
+- Style Property, eg style={}
+- AutoPicked
 
 
-# Props Available
+## Props Available
 
-All components have property that can be configured, below is the documentation format
-> property_name => default value => flexbox equivalent
+All components have following property, that maps to some css equivalent.
 
-
-###### valign => center => justify-content
-###### halign => center => align-items
-###### dir => column  =>  flex-direction
-
-
+<table>
+     <tr>
+        <th>Property Name</th>
+        <th>Default Vlaue</th>
+        <th>flexbox equivalent</th>
+    </tr>
+    <tr>
+        <td>valign</td>
+        <td>center</td>
+        <td>justify-content</td>
+    </tr>
+    <tr>
+        <td>halign</td>
+        <td>center</td>
+        <td>align-items</td>
+    </tr> 
+    <tr>
+        <td>dir</td>
+        <td>column</td>
+        <td>flex-direction</td>
+    </tr>  
+    <tr>
+        <td>fullHeight</td>
+        <td>true</td>
+        <td>height, when false, height is ''(empty)</td>
+    </tr>         
+</table>
 
 ---         
 
