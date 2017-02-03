@@ -1,5 +1,5 @@
 import React from 'react';
-import Base from '../Base/Base.web';
+import Base from '../Base/Base.r';
 
 const PanelContainer = (props) => {
   return <Base

@@ -9,7 +9,7 @@
 import {RootContainer} from 'veenbox'
 //this way it automatically chooses platform
 //or
-import RootContainer from 'veenbox/dist/RootContainer.web'
+import RootContainer from 'veenbox/dist/RootContainer.r'
 import RootContainer from 'veenbox/dist/RootContainer.ios'
 import RootContainer from 'veenbox/dist/RootContainer.android'
 ```

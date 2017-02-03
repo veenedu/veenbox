@@ -1,6 +1,6 @@
 import React from 'react';
-import Container from '../Container/Container.web';
-import {combineStyles} from '../Base/Base.web';
+import Container from '../Container/Container.r';
+import {combineStyles} from '../Base/Base.r';
 
 
 const PanelItem = (props) => {
