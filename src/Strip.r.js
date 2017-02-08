@@ -18,7 +18,8 @@ const styles ={
     flex:{
         display:'flex',
         flex:'1',
-        alignItems:'center'
+        alignItems:'center',
+        justifyContent:'center'
     },
     container:{
         flexDirection:'row'
@@ -67,8 +68,9 @@ export class StripItem extends Component {
             _style.width = width;
         }else {
             //Width not passed make it flex box
-            _style= {..._style,...{flex}};
+            _style= {..._style,...styles.flex,...{flex}};
         }
+        console.log(_style);
         let newProps = santizeObject(this.props,['style','flex','width']);
         return (
             <div style={_style} {...newProps}>
