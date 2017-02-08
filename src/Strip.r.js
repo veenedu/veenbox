@@ -28,13 +28,29 @@ const styles ={
     }
 }
 
+function santizeObject(objectData,itemsArr){
+    //objectData ={a:1,b:1,c:1,d:1}
+    //itemsArr = [b,c]
+    //Return = {a:1,d:1}
+    // let objectData ={a:1,b:1,c:1,d:1};
+    // let itemsArr = ['b','c']
+    // console.log(santizeObject(objectData,itemsArr))    
+    let newObject = {...objectData}
+    for(let i=0;i<itemsArr.length;i++){
+        delete newObject[itemsArr[i]]
+    }
+    return newObject;
+}
+
+
 export class Strip extends Component {
     render() {
         let {style,children} = this.props;
         //Flex <== StripContainer <== User Passed Style
         let _style= {...styles.flex,...styles.container,...style};
+        let newProps = santizeObject(this.props,['style']);
         return (
-            <div style={_style}>
+            <div style={_style} {...newProps}>
                 {children}
             </div>
         );
@@ -53,8 +69,9 @@ export class StripItem extends Component {
             //Width not passed make it flex box
             _style= {..._style,...{flex}};
         }
+        let newProps = santizeObject(this.props,['style','flex','width']);
         return (
-            <div style={_style}>
+            <div style={_style} {...newProps}>
                 {this.props.children}
             </div>
         );
