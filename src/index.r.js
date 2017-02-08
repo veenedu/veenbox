@@ -9,3 +9,4 @@ export RootContainer from './RootContainer/RootContainer.r';
 export ScrollView from './ScrollView/ScrollView.r';
 export LayoutManager from './LayoutManager/index.js';
 export {windowResize} from './utils/index.r';
+export {Strip, StripItem} from './Strip';
