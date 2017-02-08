@@ -70,7 +70,6 @@ export class StripItem extends Component {
             //Width not passed make it flex box
             _style= {..._style,...styles.flex,...{flex}};
         }
-        console.log(_style);
         let newProps = santizeObject(this.props,['style','flex','width']);
         return (
             <div style={_style} {...newProps}>
