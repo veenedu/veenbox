@@ -147,3 +147,15 @@ Eg: you passed, 'xs' and 'lg'. So 'xs' will be displayed till 'lg' break point i
 --
 
 breakPoints = [a,b,c] => (optional), you can pass custom break points that you want Layoout Manager to trigger at.
+
+
+# Strip
+
+```
+<Strip style={{borderBottom:'1px solid blue',padding:'0px 0px'}}>
+    <StripItem style={red}  width={30}>{span1}</StripItem>
+    <StripItem style={green} flex={2}>{span2}</StripItem>
+    <StripItem style={yellow}>{span3}</StripItem>
+    <StripItem style={red}  width={50}>{span4}</StripItem>
+</Strip>
+```
