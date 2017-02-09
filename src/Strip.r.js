@@ -19,14 +19,15 @@ const styles ={
         display:'flex',
         flex:'1',
         alignItems:'center',
-        justifyContent:'center'
+        justifyContent:'center',
+        alignSelf:'stretch'  
     },
     container:{
-        flexDirection:'row'
+        flexDirection:'row',
     },
     item:{
         textAlign:'center',
-        flexDirection:'column'        
+        flexDirection:'column',
     }
 }
 
