@@ -25,7 +25,8 @@ const styles ={
         flexDirection:'row'
     },
     item:{
-        textAlign:'center'
+        textAlign:'center',
+        flexDirection:'column'        
     }
 }
 
