@@ -16,11 +16,11 @@ export function setRootElement(element){
 }
 
 export function getRootElement(){
-    return rootElement || Div;
+    return rootElement// || Div;
 }
 
-function Div(props,style){
-    return function(p){
-        return (<div {...props} style={style}>{p.children}</div>)
-    };
-}
+// function Div(props,style){
+//     return function(p){
+//         return (<div {...props} style={style}>{p.children}</div>)
+//     };
+// }

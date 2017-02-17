@@ -44,12 +44,20 @@ class FlexBox extends Component {
         let santitizedProps = santizeObject(this.props,
             ['height','width','flex','scrollX','scrollY','halign','valign','fdir','children','noflex','style']
         );
-        let RootElement = getRootElement()(santitizedProps,this.calculateStyle());
-        return (
-            <RootElement>
-                {this.props.children}
-            </RootElement>
-        );
+        let RootElement = getRootElement();
+        
+        if(RootElement){
+            <RootElement {...santitizedProps} style={this.calculateStyle()}>{this.props.children}</RootElement>
+        }else{
+            return <div {...santitizedProps} style={this.calculateStyle()}>{this.props.children}</div>
+        }
+
+        // let RootElement = getRootElement()(santitizedProps,this.calculateStyle());
+        // return (
+        //     <RootElement>
+        //         {this.props.children}
+        //     </RootElement>
+        // );
     }
 }
 
