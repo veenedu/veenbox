@@ -46,6 +46,8 @@ class FlexBox extends Component {
         );
         let RootElement = getRootElement();
         
+        //If Root Element Passed use it.
+        //Else We will use div
         if(RootElement){
             <RootElement {...santitizedProps} style={this.calculateStyle()}>{this.props.children}</RootElement>
         }else{
