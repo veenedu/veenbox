@@ -18,7 +18,7 @@
   },
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "babel src -d dist --ignore *.test.js --copy-files",
+    "build": "babel src -d dist --ignore *.test.js --ignore src/old --copy-files",
     "build:watch": "npm run build -- --watch",
     "test": "mocha tools/testSetup.js src/**/*.test.js",
     "test:watch": "npm run test -- --watch"
