@@ -9,6 +9,10 @@ export default class LayoutManager extends React.Component {
     }
   }
 
+  shouldComponentUpdate(nextProps,nextState){
+      return nextState.width !== this.state.width;
+  }
+
   componentDidMount(){
     var that = this;
     windowResize.subscribe(function({width}){

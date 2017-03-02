@@ -1,12 +1,15 @@
-export ColumnBody from './Column/ColumnBody.r';
-export ColumnContainer from './Column/ColumnContainer.r';
-export ColumnFooter from './Column/ColumnFooter.r';
-export ColumnHeader from './Column/ColumnHeader.r';
-export PanelContainer from './Panel/PanelContainer.r';
-export PanelItem from './Panel/PanelItem.r';
-export Container from './Container/Container.r';
-export RootContainer from './RootContainer/RootContainer.r';
-export ScrollView from './ScrollView/ScrollView.r';
-export LayoutManager from './LayoutManager/index.js';
-export {windowResize} from './utils/index.r';
-export {Strip, StripItem} from './Strip';
+import Grid from './Grid';
+import Row from './Row';
+import Col from './Col';
+import ScrollView  from './ScrollView'
+import RootContainer  from './RootContainer'
+
+import {setDefaultDirection,setRootElement} from './configure'
+import LayoutManager from './old/LayoutManager/index.js';
+import {windowResize} from './old/utils/index.r';
+
+
+export {Grid,Row,Col,ScrollView,RootContainer
+    ,setDefaultDirection,setRootElement
+    ,LayoutManager,windowResize
+}
