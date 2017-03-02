@@ -4,17 +4,17 @@
   "description": "veenbox provides common components for react and react-native that can be used to build layouts for web and mobile",
   "main": "dist/index",
   "dependencies": {
-    "react": "^15.4.1",
-    "rxjs": "^5.0.0-rc.5"
+    "react": "^15.4.2",
+    "rxjs": "^5.2.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-react": "^6.16.0",
-    "babel-preset-stage-0": "^6.16.0",
+    "babel-cli": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0",
     "chai": "^3.5.0",
     "mocha": "^3.2.0",
-    "rimraf": "^2.5.4"
+    "rimraf": "^2.6.1"
   },
   "scripts": {
     "prebuild": "rimraf dist",
