@@ -1,171 +1,26 @@
-# Veen Box
-
-#### samples (https://github.com/veenedu/veenbox_web_sample)
-
-*veenbox provides react and react-native componets that can be used to build layouts for web and mobile platform using common API*
-
-
-```js
-import {RootContainer} from 'veenbox'
-//this way it automatically chooses platform
-//or
-import RootContainer from 'veenbox/dist/RootContainer.r'
-import RootContainer from 'veenbox/dist/RootContainer.ios'
-import RootContainer from 'veenbox/dist/RootContainer.android'
-```
-# Available Components
-
-```
-Column/
-  ColumnBody
-  ColumnContainer
-  ColumnFooter
-  ColumnHeader
-Panel/
-  PanelContainer
-  PanelItem
-Container
-RootContainer
-ScrollView
-```
-
-# Sharing Style
-
-For all components you can pass in-style  
-For Web you can pass any styling property, you can override default beahior of component based on [css flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
-
-## Style Priority
-(Decreasing order)  
-- Inline Property, eg halign, valign    
-- Style Property, eg style={}
-- AutoPicked
-
-
-## Props Available
-
-All components have following property, that maps to some css equivalent.
-
-<table>
-     <tr>
-        <th>Property Name</th>
-        <th>Default Vlaue</th>
-        <th>flexbox equivalent</th>
-    </tr>
-    <tr>
-        <td>valign</td>
-        <td>center</td>
-        <td>justify-content</td>
-    </tr>
-    <tr>
-        <td>halign</td>
-        <td>center</td>
-        <td>align-items</td>
-    </tr> 
-    <tr>
-        <td>dir</td>
-        <td>column</td>
-        <td>flex-direction</td>
-    </tr>  
-    <tr>
-        <td>fullHeight</td>
-        <td>true</td>
-        <td>height, when false, height is ''(empty)</td>
-    </tr>         
-</table>
-
----         
-
-# Components Description
-
-### RootContainer
-put this element at root, this will cover whole screen.
-
-### Container
-this element occupies full available space height and width,   
-overflow will be hidden
-
-### ScrollView
-this element takes whatever space available, but allow vertical scrolling
-
-### Panel
-(Vertical Panels)
-
-### PanelContainer
-Takes available space.
-
-### PanelItem
-Put this inside PanelContainer, you can pass width, if not passed it takes auto width.   
-a panelContainer may have many panel items.
-
-###  ColumnContainer
-(Horizontal column)   
-Put children in sequnce, you can ignore any component if you want.
-###### ColumnHeader
-###### ColumnBody
-###### ColumnFooter
-
-
-# CSS Reset
-
-Import CSS reset as below
-
-`import 'veenbox/dist/css-reset.css';`
-
-# Layout Manager
-This component decicdes which Laypout to be displayed based platforms width.
-
-#### Eg
-```
-<LayoutManager
-              	xs = {xs}
-              	sm = {sm}
-              	md = {md}
-              	lg = {lg}
-              	xl = {xl}
-              	breakPoints =[340,780,1024,1280]
-            /> );
-
-```
-### Available Properties
-You pass components that needs to be displayed at particular screen size.
-
-xs => (Required), React Component
-
-sm => (optional) React Component
-
-md => (optional) React Component
-
-lg => (optional) React Component
-
-xl => (optional) React Component
-
---
-
-Note: If any bigger dimension is missing then previous small dimension will be displayed.
-Eg: you passed, 'xs' and 'lg'. So 'xs' will be displayed till 'lg' break point is not hit.
-
---
-
-breakPoints = [a,b,c] => (optional), you can pass custom break points that you want Layoout Manager to trigger at.
-
-
-# Strip
-
-```
-<Strip style={{borderBottom:'1px solid blue',padding:'0px 0px'}}>
-    <StripItem style={red}  width={30}>{span1}</StripItem>
-    <StripItem style={green} flex={2}>{span2}</StripItem>
-    <StripItem style={yellow}>{span3}</StripItem>
-    <StripItem style={red}  width={50}>{span4}</StripItem>
-</Strip>
-```
-
-
 # Veenbox 2.0
 
-Grid, Col, Row
+Veenbox provides common components for React and ReactNative to build Layouts
 
-Col, Row => Explains their intention(about alignment) to their parents. 
-Col, Row => Consumes full space inside a Grid
-Col, Row => Their children can themselves be Col, Row. And Their children can explain their intention(about alignment) by being Col or Row
-Col, Row,Grid => Col, ROw assume their children to be be flexboxes. If you want to stop this default behvaior add "noflex"
+# List of Exposed Components
+
+- Flexbox
+- RootContainer
+- Panel
+- PanelItem
+- Strip
+- StripItem
+
+
+`RootContainer` is Root for Applicaton should be used 
+once
+
+`Flexbox`  is root lower level implementation
+
+`Panel` -> Vertical Panels
+
+`Strip` -> Horizontal Strips
+
+`
+    import {Flexbox,RootContainer, Panel,PanelItem, Strip, StripItem} from 'veenbox'
+`
