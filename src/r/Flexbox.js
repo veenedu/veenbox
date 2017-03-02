@@ -13,13 +13,10 @@ import React, { PropTypes } from 'react';
  * 0. Create a method to cache style.
  * May be just a function that computes a styles and return
  * 
- * 1. Move to veenbox
- * Create 2 folders r, rn, and share with three files. index.js, index.ios, index.android.js
- * 
  * 2. Define Types for panel,strip and their item
  * 
  * 3.More on types
- * // => justofy and align
+ * // => justify and align
  *   // You can ensure that your prop is limited to specific values by treating
   // it as an enum.
   optionalEnum: React.PropTypes.oneOf(['News', 'Photos']),
