@@ -159,3 +159,13 @@ breakPoints = [a,b,c] => (optional), you can pass custom break points that you w
     <StripItem style={red}  width={50}>{span4}</StripItem>
 </Strip>
 ```
+
+
+# Veenbox 2.0
+
+Grid, Col, Row
+
+Col, Row => Explains their intention(about alignment) to their parents. 
+Col, Row => Consumes full space inside a Grid
+Col, Row => Their children can themselves be Col, Row. And Their children can explain their intention(about alignment) by being Col or Row
+Col, Row,Grid => Col, ROw assume their children to be be flexboxes. If you want to stop this default behvaior add "noflex"
